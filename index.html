@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accell — Brand Identity v5</title>
+<title>Accell | Advanced Robotics Research</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..700;1,9..40,100..700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
   .hdr{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--border-s)}
   .hdr-b{font-weight:500;font-size:13px}.hdr-b .tld{color:var(--t4);font-weight:400}
   .hdr-l{display:flex;gap:2px}
-  .hdr-a{font-size:12px;color:var(--t3);padding:5px 10px;border-radius:var(--rs);cursor:default;transition:color .12s,background .12s}
+  .hdr-a{font-size:12px;color:var(--t3);padding:5px 10px;border-radius:var(--rs);cursor:default;transition:color .12s,background .12s;text-decoration:none}
   .hdr-a:hover{color:var(--t2);background:var(--raised)}
   @media(max-width:640px){.hdr-l{display:none}}
 
@@ -45,9 +45,9 @@
   .hb .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
   .hh{font-size:clamp(32px,5vw,48px);font-weight:500;letter-spacing:-1.2px;line-height:1.08;margin-bottom:16px;opacity:0;animation:up .4s .2s ease forwards}
   .hh .d{color:var(--t5)}
-  .hp{font-size:15px;font-weight:300;color:var(--t3);line-height:1.7;max-width:440px;margin-bottom:28px;opacity:0;animation:up .4s .3s ease forwards}
+  .hp{font-size:15px;font-weight:300;color:var(--t3);line-height:1.7;max-width:540px;margin-bottom:28px;opacity:0;animation:up .4s .3s ease forwards}
   .ha{display:flex;gap:8px;opacity:0;animation:up .4s .4s ease forwards}
-  .btn{font-size:12px;font-weight:500;padding:7px 16px;border-radius:var(--rs);border:1px solid transparent;cursor:default;transition:all .12s}
+  .btn{font-size:12px;font-weight:500;padding:7px 16px;border-radius:var(--rs);border:1px solid transparent;cursor:default;transition:all .12s;text-decoration:none}
   .btn--s{background:var(--t1);color:var(--bg)}.btn--s:hover{background:#E4E4E7}
   .btn--g{color:var(--t3);border-color:var(--border);background:transparent}.btn--g:hover{color:var(--t2);background:var(--raised)}
   .hs{display:flex;gap:36px;margin-top:40px;padding-top:24px;border-top:1px solid var(--border-s);opacity:0;animation:up .4s .5s ease forwards}
@@ -55,135 +55,30 @@
   .hs span{font-size:11px;color:var(--t4)}
   @keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-  /* LOGO */
-  .lr{display:flex;align-items:center;gap:32px;margin-bottom:48px;flex-wrap:wrap}
-  .lm{width:64px;height:64px}.lm svg{width:100%;height:100%}
-  .lm-r{fill:none;stroke:var(--border);stroke-width:1.2}
-  .lm-a{fill:none;stroke:var(--t1);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-  .lm-d{fill:var(--accent)}
-  .lt h2{font-size:28px;font-weight:500;letter-spacing:-.6px}
-  .lt .tld{font-family:'Geist Mono',monospace;font-size:11px;color:var(--t4);letter-spacing:1px;display:block;margin-top:2px}
-  .lg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-s);border:1px solid var(--border-s);border-radius:var(--r);overflow:hidden}
-  @media(max-width:640px){.lg{grid-template-columns:repeat(2,1fr)}}
-  .lc{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;transition:filter .15s}
-  .lc:hover{filter:brightness(1.06)}
-  .lc-t{position:absolute;top:8px;left:10px;font-family:'Geist Mono',monospace;font-size:8px;opacity:.3;letter-spacing:.5px}
-  .lc--a{background:var(--bg);color:var(--t1)}.lc--b{background:var(--elevated);color:var(--t1)}
-  .lc--c{background:#FAFAFA;color:#09090B}.lc--d{background:var(--accent);color:white}
-  .lc svg{width:36px;height:36px}
-  .lc-n{font-size:13px;font-weight:500;letter-spacing:-.2px}
-  .lc-tl{font-family:'Geist Mono',monospace;font-size:8px;opacity:.4;letter-spacing:1px}
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:3fr 2fr;gap:48px;align-items:start}
+  .about p{font-size:14px;font-weight:300;color:var(--t3);line-height:1.7;margin-bottom:16px}
+  .about p:last-child{margin-bottom:0}
+  .about-vis{background:var(--elevated);border:1px solid var(--border-s);border-radius:var(--r);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+  .about-vis svg{width:100px;height:100px}
+  @media(max-width:640px){.about{grid-template-columns:1fr}.about-vis{max-width:200px;order:-1}}
 
-  /* PALETTE */
-  .pr{display:grid;grid-template-columns:28px 1fr 80px 1fr;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--border-s);transition:background .12s}
-  .pr:first-child{border-top:1px solid var(--border-s)}
-  .pr:hover{background:var(--raised);margin:0 -12px;padding:12px 12px;border-radius:var(--rs)}
-  .ps{width:28px;height:28px;border-radius:var(--rs);border:1px solid var(--border-s)}
-  .pn{font-size:13px;font-weight:500}.px{font-family:'Geist Mono',monospace;font-size:11px;color:var(--t4)}.pu{font-size:11px;color:var(--t3)}
-  @media(max-width:640px){.pr{grid-template-columns:28px 1fr 80px}.pu{display:none}}
-  .ab{margin-top:32px;padding:20px;border:1px solid var(--border);border-radius:var(--r);background:var(--raised);display:flex;align-items:center;gap:16px}
-  .ab-s{width:48px;height:48px;border-radius:var(--r);background:var(--accent);flex-shrink:0}
-  .ab h4{font-size:13px;font-weight:500;margin-bottom:2px}.ab p{font-size:11px;color:var(--t3);line-height:1.5}
+  /* RESEARCH GRID */
+  .rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .rc{background:var(--bg);border:1px solid var(--border-s);border-radius:var(--rs);padding:28px 24px;transition:border-color .15s,transform .15s}
+  .rc:hover{border-color:var(--border);transform:translateY(-2px)}
+  .rc-icon{font-size:28px;margin-bottom:16px;display:block}
+  .rc h3{font-size:14px;font-weight:500;margin-bottom:8px}
+  .rc p{font-size:12px;color:var(--t3);line-height:1.65}
 
-  /* TYPE */
-  .ts{display:flex;flex-direction:column;gap:1px;background:var(--border-s);border:1px solid var(--border-s);border-radius:var(--r);overflow:hidden}
-  .tr{background:var(--bg);padding:36px;transition:background .12s}.tr:hover{background:var(--raised)}
-  .th{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:8px}
-  .tp{font-family:'Geist Mono',monospace;font-size:10px;color:var(--accent);background:var(--accent-d);padding:3px 8px;border-radius:4px}
-  .tsp{font-family:'Geist Mono',monospace;font-size:10px;color:var(--t4)}
-  .tsh{font-size:clamp(24px,4vw,40px);font-weight:500;letter-spacing:-.8px;line-height:1.1}.tsh .d{color:var(--t5)}
-  .tsb{font-size:15px;font-weight:300;color:var(--t3);line-height:1.7;max-width:480px}
-  .tsc{font-family:'Geist Mono',monospace;font-size:12px;line-height:1.9;background:var(--elevated);border:1px solid var(--border-s);border-radius:var(--rs);padding:16px 20px}
-  .tsc .k{color:var(--t4)}.tsc .v{color:var(--t2)}.tsc .a{color:var(--accent)}.tsc .g{color:var(--green)}
-
-  /* MOCKUPS */
-  .mk{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--bg);margin-bottom:20px;transition:border-color .15s}
-  .mk:hover{border-color:#333}
-  .mb{display:flex;align-items:center;padding:10px 14px;background:var(--raised);border-bottom:1px solid var(--border-s);gap:6px}
-  .md{width:9px;height:9px;border-radius:50%;background:var(--t5)}
-  .mu{flex:1;margin-left:10px;font-family:'Geist Mono',monospace;font-size:10px;color:var(--t4);background:var(--bg);padding:4px 10px;border-radius:4px;border:1px solid var(--border-s)}
-
-  /* Hero mock */
-  .mp{padding:40px;min-height:380px;display:flex;flex-direction:column}
-  @media(max-width:640px){.mp{padding:20px}}
-  .mn{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px}
-  .mn-b{font-size:13px;font-weight:500}.mn-b .tld{color:var(--t4);font-weight:400}
-  .mn-l{display:flex;gap:20px;font-size:12px;color:var(--t4)}
-  @media(max-width:640px){.mn-l{display:none}}
-  .mn-c{font-size:11px;font-weight:500;padding:5px 12px;background:var(--t1);color:var(--bg);border-radius:var(--rs)}
-  .mp-b{flex:1;display:flex;flex-direction:column;justify-content:center}
-  .mp-h{font-size:32px;font-weight:500;letter-spacing:-.8px;line-height:1.1;margin-bottom:12px}.mp-h .d{color:var(--t5)}
-  .mp-p{font-size:13px;color:var(--t3);line-height:1.7;max-width:380px;font-weight:300;margin-bottom:24px}
-  .mp-a{display:flex;gap:6px}
-  .mp-btn{font-size:11px;font-weight:500;padding:6px 14px;border-radius:var(--rs)}
-  .mp-btn--s{background:var(--t1);color:var(--bg)}.mp-btn--g{color:var(--t3);border:1px solid var(--border);background:transparent}
-  .mp-s{display:flex;gap:32px;margin-top:40px;padding-top:20px;border-top:1px solid var(--border-s)}
-  .mp-st strong{font-family:'Geist Mono',monospace;font-size:14px;font-weight:500;display:block}
-  .mp-st span{font-size:10px;color:var(--t4)}
-
-  /* Research mock */
-  .mp-d{padding:32px}
-  .mp-dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
-  .mp-dt{font-size:14px;font-weight:500}
-  .mt{display:flex;border:1px solid var(--border);border-radius:var(--rs);overflow:hidden}
-  .mt span{font-family:'Geist Mono',monospace;font-size:10px;padding:4px 12px;color:var(--t4);border-right:1px solid var(--border);cursor:default;transition:all .12s}
-  .mt span:last-child{border-right:none}.mt span.a{background:var(--elevated);color:var(--t2)}.mt span:hover{background:var(--raised);color:var(--t3)}
-  .dg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-  @media(max-width:640px){.dg{grid-template-columns:1fr}}
-  .dc{border:1px solid var(--border-s);border-radius:var(--rs);overflow:hidden;transition:border-color .15s;cursor:default}
-  .dc:hover{border-color:var(--border)}
-  .di{height:100px;position:relative}
-  .di--1{background:linear-gradient(135deg,#111116,#18182a)}.di--2{background:linear-gradient(135deg,#111116,#162218)}.di--3{background:linear-gradient(135deg,#111116,#221618)}
-  .dc-c{position:absolute;bottom:6px;left:8px;font-family:'Geist Mono',monospace;font-size:8px;color:rgba(255,255,255,.2)}
-  .dc-b{padding:12px 14px}
-  .dc-n{font-size:13px;font-weight:500;margin-bottom:2px}
-  .dc-s{font-size:10px;color:var(--t4);margin-bottom:10px}
-  .dc-f{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--border-s)}
-  .dc-p{font-family:'Geist Mono',monospace;font-size:11px;color:var(--accent)}
-  .dc-ar{font-size:11px;color:var(--t4);transition:transform .12s,color .12s}.dc:hover .dc-ar{color:var(--t2);transform:translateX(2px)}
-
-  /* Component cards */
-  .cg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  @media(max-width:640px){.cg{grid-template-columns:1fr}}
-  .cc{border:1px solid var(--border-s);border-radius:var(--rs);padding:20px;background:var(--bg);transition:border-color .12s}
-  .cc:hover{border-color:var(--border)}
-  .cc-l{font-family:'Geist Mono',monospace;font-size:9px;color:var(--t4);margin-bottom:14px;letter-spacing:.3px}
-  .tx{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border-s)}
-  .tx:last-child{border-bottom:none}
-  .tx-l{display:flex;align-items:center;gap:8px}
-  .tx-i{width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px}
-  .tx-i--f{background:var(--accent-d);color:var(--accent)}.tx-i--h{background:var(--green-d);color:var(--green)}.tx-i--r{background:var(--red-d);color:var(--red)}
-  .tx-n{font-size:12px;font-weight:500}.tx-s{font-size:10px;color:var(--t4)}
-  .tx-am{font-family:'Geist Mono',monospace;font-size:11px;text-align:right}
-  .tx-ok{font-size:9px;color:var(--green)}
-  .po{display:flex;justify-content:space-between;padding:6px 0}
-  .po+.po{border-top:1px solid var(--border-s)}
-  .po-k{font-family:'Geist Mono',monospace;font-size:10px;color:var(--t4)}
-  .po-v{font-family:'Geist Mono',monospace;font-size:10px}
-  .po-v--g{color:var(--green)}.po-v--a{color:var(--accent)}
-
-  /* GUIDELINES */
-  .gl{display:flex;flex-direction:column;gap:1px;background:var(--border-s);border:1px solid var(--border-s);border-radius:var(--r);overflow:hidden;margin-bottom:32px}
-  .gi{background:var(--bg);padding:28px 32px;display:grid;grid-template-columns:32px 1fr;gap:16px;transition:background .12s}
-  .gi:hover{background:var(--raised)}
-  .gi-n{font-family:'Geist Mono',monospace;font-size:11px;color:var(--t5);padding-top:2px}
-  .gi h3{font-size:14px;font-weight:500;margin-bottom:6px}
-  .gi p{font-size:12px;color:var(--t3);line-height:1.65;max-width:480px}
-  .dd{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  @media(max-width:640px){.dd{grid-template-columns:1fr}}
-  .db{padding:24px;border-radius:var(--r)}
-  .db--g{background:var(--green-d);border:1px solid #22C55E30}
-  .db--r{background:var(--red-d);border:1px solid #EF444430}
-  .db h4{font-size:12px;font-weight:600;margin-bottom:14px;font-family:'Geist Mono',monospace;letter-spacing:.3px}
-  .db--g h4{color:var(--green)}.db--r h4{color:var(--red)}
-  .db li{list-style:none;font-size:12px;color:var(--t3);line-height:2;padding-left:16px;position:relative}
-  .db--g li::before{content:'✓';position:absolute;left:0;color:var(--green);font-size:10px}
-  .db--r li::before{content:'✗';position:absolute;left:0;color:var(--red);font-size:10px}
+  /* CONTACT */
+  .contact{text-align:center;max-width:520px;margin:0 auto}
+  .contact h2{font-size:clamp(24px,4vw,36px);font-weight:500;letter-spacing:-.6px;margin-bottom:12px}
+  .contact p{font-size:14px;font-weight:300;color:var(--t3);line-height:1.7;margin-bottom:28px}
 
   /* FOOTER */
-  .ftr{padding:64px 0;text-align:center;border-top:1px solid var(--border-s)}
-  .ftr-n{font-size:16px;font-weight:500;letter-spacing:-.2px;margin-bottom:4px}.ftr-n .tld{color:var(--t4);font-weight:400}
-  .ftr-s{font-family:'Geist Mono',monospace;font-size:10px;color:var(--t5);letter-spacing:.5px}
+  .ftr{padding:40px 0;text-align:center;border-top:1px solid var(--border-s)}
+  .ftr-n{font-size:13px;color:var(--t4);font-weight:400}
 </style>
 </head>
 <body>
@@ -191,152 +86,96 @@
 <div class="w">
   <nav class="hdr">
     <span class="hdr-b">accell<span class="tld">.io</span></span>
-    <div class="hdr-l"><span class="hdr-a">Research</span><span class="hdr-a">Platform</span><span class="hdr-a">Brand</span></div>
+    <div class="hdr-l"><a href="#about" class="hdr-a">About</a><a href="#research" class="hdr-a">Research</a><a href="#contact" class="hdr-a">Contact</a></div>
   </nav>
 </div>
 
 <div class="w">
   <div class="hero">
-    <div class="hb"><span class="dot"></span> Brand Identity v5.0</div>
-    <h1 class="hh">accell<span class="d">.io</span></h1>
-    <p class="hp">Minimalist identity system for autonomous robotics research. Built on restraint. Zinc palette. One accent. No noise.</p>
-    <div class="ha"><span class="btn btn--s">View System</span><span class="btn btn--g">Source ↗</span></div>
+    <div class="hb"><span class="dot"></span> Pioneering the Future</div>
+    <h1 class="hh">Advanced Robotics<br><span class="d">Research</span></h1>
+    <p class="hp">We develop cutting-edge autonomous systems and intelligent robotics solutions that push the boundaries of what machines can achieve.</p>
+    <div class="ha"><a href="#contact" class="btn btn--s">Get in Touch</a><a href="#research" class="btn btn--g">Our Research ↗</a></div>
     <div class="hs">
       <div><strong>12+</strong><span>Patents</span></div>
-      <div><strong>0.8ms</strong><span>Response latency</span></div>
-      <div><strong>6 DOF</strong><span>Manipulation</span></div>
+      <div><strong>42</strong><span>Researchers</span></div>
+      <div><strong>6</strong><span>Research Labs</span></div>
     </div>
   </div>
 </div>
 
 <div class="w"><hr class="hr"></div>
 
-<!-- LOGO -->
-<div class="w"><div class="sect">
-  <p class="sl">01 — Logomark</p>
-  <h2 class="sh">The mark <span class="d">& wordmark</span></h2>
-  <div class="lr">
-    <div class="lm"><svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" class="lm-r"/><path d="M55 96 L70 44 L85 96" class="lm-a"/><path d="M60 76 L80 76" class="lm-a" stroke-width="2"/><circle cx="70" cy="34" r="3" class="lm-d"/></svg></div>
-    <div class="lt"><h2>accell</h2><span class="tld">.io</span></div>
-  </div>
-  <div class="lg">
-    <div class="lc lc--a"><span class="lc-t">Default</span><svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" stroke="#27272A" stroke-width="1.2" fill="none"/><path d="M55 96 L70 44 L85 96" stroke="#FAFAFA" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 76 L80 76" stroke="#FAFAFA" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="70" cy="34" r="3" fill="#F97316"/></svg><span class="lc-n">accell</span><span class="lc-tl">.io</span></div>
-    <div class="lc lc--b"><span class="lc-t">Elevated</span><svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" stroke="#3F3F46" stroke-width="1.2" fill="none"/><path d="M55 96 L70 44 L85 96" stroke="#FAFAFA" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 76 L80 76" stroke="#FAFAFA" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="70" cy="34" r="3" fill="#F97316"/></svg><span class="lc-n">accell</span><span class="lc-tl">.io</span></div>
-    <div class="lc lc--c"><span class="lc-t">Light</span><svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" stroke="#E4E4E7" stroke-width="1.2" fill="none"/><path d="M55 96 L70 44 L85 96" stroke="#09090B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 76 L80 76" stroke="#09090B" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="70" cy="34" r="3" fill="#F97316"/></svg><span class="lc-n">accell</span><span class="lc-tl">.io</span></div>
-    <div class="lc lc--d"><span class="lc-t">Accent</span><svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" stroke="rgba(255,255,255,.25)" stroke-width="1.2" fill="none"/><path d="M55 96 L70 44 L85 96" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 76 L80 76" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="70" cy="34" r="3" fill="white"/></svg><span class="lc-n">accell</span><span class="lc-tl">.io</span></div>
-  </div>
-</div></div>
-
-<div class="w"><hr class="hr"></div>
-
-<!-- PALETTE -->
-<div class="w"><div class="sect">
-  <p class="sl">02 — Colors</p>
-  <h2 class="sh">Palette <span class="d">— zinc + one accent</span></h2>
-  <div>
-    <div class="pr"><div class="ps" style="background:#09090B"></div><span class="pn">Background</span><span class="px mono">#09090B</span><span class="pu">App background</span></div>
-    <div class="pr"><div class="ps" style="background:#18181B"></div><span class="pn">Elevated</span><span class="px mono">#18181B</span><span class="pu">Cards, surfaces</span></div>
-    <div class="pr"><div class="ps" style="background:#27272A"></div><span class="pn">Border</span><span class="px mono">#27272A</span><span class="pu">Dividers, outlines</span></div>
-    <div class="pr"><div class="ps" style="background:#FAFAFA"></div><span class="pn">Foreground</span><span class="px mono">#FAFAFA</span><span class="pu">Primary text</span></div>
-    <div class="pr"><div class="ps" style="background:#A1A1AA"></div><span class="pn">Muted</span><span class="px mono">#A1A1AA</span><span class="pu">Secondary text</span></div>
-    <div class="pr"><div class="ps" style="background:#52525B"></div><span class="pn">Ghost</span><span class="px mono">#52525B</span><span class="pu">Placeholders</span></div>
-    <div class="pr"><div class="ps" style="background:var(--accent)"></div><span class="pn">Accent</span><span class="px mono">#F97316</span><span class="pu">Sensor data, logo node</span></div>
-    <div class="pr"><div class="ps" style="background:var(--green)"></div><span class="pn">Success</span><span class="px mono">#22C55E</span><span class="pu">Operational, nominal</span></div>
-    <div class="pr"><div class="ps" style="background:var(--red)"></div><span class="pn">Destructive</span><span class="px mono">#EF4444</span><span class="pu">Faults, alerts</span></div>
-  </div>
-  <div class="ab"><div class="ab-s"></div><div><h4>Orange #F97316 — the only accent</h4><p>One color. Sensor highlights, the logo node, active states, data accents. Everything else is zinc. Restraint is the system.</p></div></div>
-</div></div>
-
-<div class="w"><hr class="hr"></div>
-
-<!-- TYPOGRAPHY -->
-<div class="w"><div class="sect">
-  <p class="sl">03 — Typography</p>
-  <h2 class="sh">Type system <span class="d">— two fonts</span></h2>
-  <div class="ts">
-    <div class="tr"><div class="th"><span class="tp">Headings</span><span class="tsp">DM Sans · 500</span></div><p class="tsh">Build smarter.<br><span class="d">Move faster.</span></p></div>
-    <div class="tr"><div class="th"><span class="tp">Body</span><span class="tsp">DM Sans · Light 300</span></div><p class="tsb">Accell builds the infrastructure for autonomous robotics. Sensor fusion handles perception. Control systems handle precision. You just ship.</p></div>
-    <div class="tr"><div class="th"><span class="tp">Mono</span><span class="tsp">Geist Mono · 400</span></div><div class="tsc"><span class="k">system</span>  <span class="v">accell-arm-v4</span><br><span class="k">joint</span>   <span class="a">θ₁: 45.2° → 90.0°</span><br><span class="k">latency</span> <span class="v">0.8ms ± 0.02</span><br><span class="k">payload</span> <span class="a">12.5kg nominal</span><br><span class="k">status</span>  <span class="g">operational ✓</span></div></div>
+<!-- ABOUT -->
+<div class="w"><div class="sect" id="about">
+  <p class="sl">01 — About Us</p>
+  <h2 class="sh">Who we are</h2>
+  <div class="about">
+    <div>
+      <p>Accell is a leading robotics research company dedicated to advancing the field of autonomous systems, machine learning, and human-robot interaction.</p>
+      <p>Founded by a team of researchers and engineers from top institutions, we combine academic rigor with practical innovation to solve real-world challenges.</p>
+      <p>Our multidisciplinary team works at the intersection of mechanical engineering, computer science, and artificial intelligence to create robots that can perceive, reason, and act in complex environments.</p>
+    </div>
+    <div class="about-vis">
+      <svg viewBox="0 0 140 140" fill="none"><polygon points="70,14 122,44 122,96 70,126 18,96 18,44" stroke="#27272A" stroke-width="1.2" fill="none"/><path d="M55 96 L70 44 L85 96" stroke="#FAFAFA" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 76 L80 76" stroke="#FAFAFA" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="70" cy="34" r="3" fill="#F97316"/></svg>
+    </div>
   </div>
 </div></div>
 
 <div class="w"><hr class="hr"></div>
 
-<!-- MOCKUPS -->
-<div class="w"><div class="sect">
-  <p class="sl">04 — Application</p>
-  <h2 class="sh">In context</h2>
-
-  <div class="mk"><div class="mb"><div class="md"></div><div class="md"></div><div class="md"></div><span class="mu">accell.io</span></div>
-    <div class="mp"><div class="mn"><span class="mn-b">accell<span class="tld">.io</span></span><div class="mn-l"><span>Research</span><span>Platform</span><span>Careers</span></div><span class="mn-c">Request Access</span></div>
-      <div class="mp-b"><h2 class="mp-h">Build autonomous systems.<br><span class="d">Ship real-world robots.</span></h2><p class="mp-p">Full-stack robotics platform with sensor fusion, real-time control, and simulation. No middleware pain. No integration hell.</p><div class="mp-a"><span class="mp-btn mp-btn--s">Request Access</span><span class="mp-btn mp-btn--g">Documentation</span></div>
-        <div class="mp-s"><div class="mp-st"><strong>12+</strong><span>Patents</span></div><div class="mp-st"><strong>0.8ms</strong><span>Latency</span></div><div class="mp-st"><strong>6 DOF</strong><span>Manipulation</span></div></div>
-      </div></div></div>
-
-  <div class="mk"><div class="mb"><div class="md"></div><div class="md"></div><div class="md"></div><span class="mu">accell.io/research</span></div>
-    <div class="mp-d"><div class="mp-dh"><span class="mp-dt">Research</span><div class="mt"><span class="a">All</span><span>Manipulation</span><span>Locomotion</span><span>Perception</span></div></div>
-      <div class="dg">
-        <div class="dc"><div class="di di--1"><span class="dc-c">6 DOF · 12.5kg payload</span></div><div class="dc-b"><h4 class="dc-n">Dexterous Manipulation</h4><p class="dc-s">Active · v4.2 · 0.8ms latency</p><div class="dc-f"><span class="dc-p">Production</span><span class="dc-ar">→</span></div></div></div>
-        <div class="dc"><div class="di di--2"><span class="dc-c">12 DOF · All-terrain</span></div><div class="dc-b"><h4 class="dc-n">Quadruped Locomotion</h4><p class="dc-s">Testing · v2.1 · 2.4m/s max</p><div class="dc-f"><span class="dc-p">Beta</span><span class="dc-ar">→</span></div></div></div>
-        <div class="dc"><div class="di di--3"><span class="dc-c">Stereo · 60 FPS</span></div><div class="dc-b"><h4 class="dc-n">Visual SLAM</h4><p class="dc-s">Production · v3.0 · ±2cm accuracy</p><div class="dc-f"><span class="dc-p">Deployed</span><span class="dc-ar">→</span></div></div></div>
-      </div></div></div>
-
-  <div class="mk"><div class="mb"><div class="md"></div><div class="md"></div><div class="md"></div><span class="mu">accell.io/dashboard</span></div>
-    <div style="padding:24px"><div class="cg">
-      <div class="cc"><p class="cc-l">Recent Operations</p>
-        <div class="tx"><div class="tx-l"><div class="tx-i tx-i--f">⚙</div><div><div class="tx-n">Arm Calibration</div><div class="tx-s">Joint sync · 3m ago</div></div></div><div><div class="tx-am">6/6 joints</div><div class="tx-ok">Complete</div></div></div>
-        <div class="tx"><div class="tx-l"><div class="tx-i tx-i--h">◈</div><div><div class="tx-n">Navigation Test</div><div class="tx-s">Waypoint · 1h ago</div></div></div><div><div class="tx-am">98.2% accuracy</div><div class="tx-ok">Passed</div></div></div>
-        <div class="tx"><div class="tx-l"><div class="tx-i tx-i--r">⚠</div><div><div class="tx-n">Sensor Fault</div><div class="tx-s">LiDAR · 2h ago</div></div></div><div><div class="tx-am" style="color:var(--red)">Sector 3</div><div class="tx-s">Resolved</div></div></div>
-      </div>
-      <div class="cc"><p class="cc-l">System Status</p>
-        <div class="po"><span class="po-k">system</span><span class="po-v po-v--a">accell-arm-v4</span></div>
-        <div class="po"><span class="po-k">status</span><span class="po-v po-v--g">operational ✓</span></div>
-        <div class="po"><span class="po-k">uptime</span><span class="po-v po-v--g">99.97%</span></div>
-        <div class="po"><span class="po-k">firmware</span><span class="po-v">v4.2.1</span></div>
-        <div class="po"><span class="po-k">joints</span><span class="po-v po-v--g">6/6 nominal</span></div>
-        <div class="po"><span class="po-k">last_check</span><span class="po-v">3s ago</span></div>
-        <div class="po"><span class="po-k">compliance</span><span class="po-v po-v--g">ISO 10218 · CE</span></div>
-      </div>
-    </div></div></div>
-</div></div>
-
-<div class="w"><hr class="hr"></div>
-
-<!-- GUIDELINES -->
-<div class="w"><div class="sect">
-  <p class="sl">05 — Principles</p>
-  <h2 class="sh">The rules</h2>
-  <div class="gl">
-    <div class="gi"><span class="gi-n">01</span><div><h3>Zinc is the system</h3><p>The UI lives in the zinc scale (#09090B → #FAFAFA). No blues, purples, or cyans. Background, text, borders — all zinc. The monotone canvas makes the single accent work.</p></div></div>
-    <div class="gi"><span class="gi-n">02</span><div><h3>One accent, deployed surgically</h3><p>Orange #F97316 appears only where attention is earned: sensor data, the logo node, active states. If everything glows, nothing does. Use it like punctuation.</p></div></div>
-    <div class="gi"><span class="gi-n">03</span><div><h3>Components, not pages</h3><p>Think in cards, rows, and cells. 1px borders. 6-8px radii. Hover states that barely whisper. The system is composable, not decorative.</p></div></div>
-    <div class="gi"><span class="gi-n">04</span><div><h3>Data is the interface</h3><p>Joint angles, sensor feeds, latency metrics, system statuses — render in Geist Mono at small sizes. The data isn't decoration. It's the product.</p></div></div>
-    <div class="gi"><span class="gi-n">05</span><div><h3>Earn every pixel</h3><p>No gradients. No glows. No shadows heavier than 4px blur. No radius over 12px. Every visual element must justify its existence.</p></div></div>
-  </div>
-  <div class="dd">
-    <div class="db db--g"><h4>Do</h4><ul>
-      <li>Use zinc scale for all neutral surfaces</li>
-      <li>Keep borders at 1px, always</li>
-      <li>Use Geist Mono for data and technical info</li>
-      <li>Reserve orange for sensor data and active states</li>
-      <li>Use DM Sans at weight 300–500 only</li>
-      <li>Keep type sizes 11–15px for most UI</li>
-      <li>Build with cards and rows, not hero sections</li>
-    </ul></div>
-    <div class="db db--r"><h4>Don't</h4><ul>
-      <li>Use gradients, glows, or neon effects</li>
-      <li>Add colors beyond zinc + orange + semantic</li>
-      <li>Use type larger than 48px outside of hero</li>
-      <li>Apply border-radius larger than 12px</li>
-      <li>Use serif or display fonts anywhere</li>
-      <li>Add decorative elements that don't serve data</li>
-      <li>Use box-shadow heavier than 0 4px 12px</li>
-    </ul></div>
+<!-- RESEARCH -->
+<div class="w"><div class="sect" id="research">
+  <p class="sl">02 — Research Areas</p>
+  <h2 class="sh">What we work on</h2>
+  <div class="rg">
+    <div class="rc">
+      <span class="rc-icon">⬡</span>
+      <h3>Autonomous Navigation</h3>
+      <p>Developing robust perception and planning algorithms for robots to navigate complex, dynamic environments without human intervention.</p>
+    </div>
+    <div class="rc">
+      <span class="rc-icon">◈</span>
+      <h3>Machine Learning</h3>
+      <p>Applying deep learning and reinforcement learning to enable robots to learn from experience and adapt to new situations.</p>
+    </div>
+    <div class="rc">
+      <span class="rc-icon">⟡</span>
+      <h3>Human-Robot Interaction</h3>
+      <p>Creating intuitive interfaces and collaborative systems that allow humans and robots to work together safely and effectively.</p>
+    </div>
+    <div class="rc">
+      <span class="rc-icon">⚙</span>
+      <h3>Mechatronics</h3>
+      <p>Designing and building novel robotic hardware with advanced actuation, sensing, and control systems.</p>
+    </div>
+    <div class="rc">
+      <span class="rc-icon">◉</span>
+      <h3>Computer Vision</h3>
+      <p>Developing visual perception systems that enable robots to understand and interpret their surroundings in real-time.</p>
+    </div>
+    <div class="rc">
+      <span class="rc-icon">⬢</span>
+      <h3>Multi-Robot Systems</h3>
+      <p>Researching coordination and communication protocols for swarms of robots working together on complex tasks.</p>
+    </div>
   </div>
 </div></div>
 
 <div class="w"><hr class="hr"></div>
-<div class="w"><div class="ftr"><p class="ftr-n">accell<span class="tld">.io</span></p><p class="ftr-s">Brand Identity System · v5.0 · 2025</p></div></div>
+
+<!-- CONTACT -->
+<div class="w"><div class="sect" id="contact">
+  <p class="sl">03 — What's Next?</p>
+  <div class="contact">
+    <h2>Get In Touch</h2>
+    <p>We're always looking for talented researchers, industry partners, and exciting challenges. Whether you have a project in mind or just want to learn more about our work, we'd love to hear from you.</p>
+    <a href="mailto:hello@accell.io" class="btn btn--s">Say Hello</a>
+  </div>
+</div></div>
+
+<div class="w"><hr class="hr"></div>
+<div class="w"><div class="ftr"><p class="ftr-n">© 2026 Accell Robotics. All rights reserved.</p></div></div>
 
 </body>
 </html>
